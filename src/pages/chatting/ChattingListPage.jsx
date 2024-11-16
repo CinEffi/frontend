@@ -34,13 +34,13 @@ const ChattingListPage = () => {
     }
   };
 
-  const handleRoomList = (event) => {
+  const handleRoomList = event => {
     // setIsLoading(true);
     const response = JSON.parse(event.data);
     const roomLogsList = response.data?.result?.list || [];
 
     if (response.type === 'LIST') {
-      const newRoom = roomLogsList.map((roomLogs) => ({
+      const newRoom = roomLogsList.map(roomLogs => ({
         chatroomId: roomLogs.chatroomId,
         title: roomLogs.title,
         tags: roomLogs.tags,
@@ -70,16 +70,16 @@ const ChattingListPage = () => {
           response.data.closedAt.slice(11, 16),
         userCount: response.data.userCount,
       };
-      setRooms((prev) => [newRoom, ...prev]);
+      setRooms(prev => [newRoom, ...prev]);
     } else if (response.type === 'CLOSECHAT') {
       const targetId = response.data;
-      setRooms((prevRooms) =>
-        prevRooms.filter((room) => room.chatroomId !== targetId)
+      setRooms(prevRooms =>
+        prevRooms.filter(room => room.chatroomId !== targetId)
       );
     } else if (response.type === 'JOINCHAT') {
       const targetId = response.data;
-      setRooms((prevRooms) => {
-        return prevRooms.map((room) => {
+      setRooms(prevRooms => {
+        return prevRooms.map(room => {
           if (room.chatroomId === targetId) {
             return { ...room, userCount: room.userCount + 1 };
           }
@@ -88,8 +88,8 @@ const ChattingListPage = () => {
       });
     } else if (response.type === 'EXITCHAT') {
       const targetId = response.data;
-      setRooms((prevRooms) => {
-        return prevRooms.map((room) => {
+      setRooms(prevRooms => {
+        return prevRooms.map(room => {
           if (room.chatroomId === targetId) {
             return { ...room, userCount: room.userCount - 1 };
           }
@@ -145,7 +145,7 @@ const ChattingListPage = () => {
     <div className={style.container}>
       <div className={style.chatContainer}>
         <div className={style.chatBox}>
-          <div className={style.tableList} color='#333'>
+          <div className={style.tableList} color="#333">
             <button
               className={isRamification ? style.selectBtn : style.noneSelectBtn}
               onClick={clickOnTap}
@@ -184,8 +184,8 @@ const ChattingListPage = () => {
               />
             ))
           ) : (
-            <></>
-            // <div className={style.none}>개설된 방이 없습니다.</div>
+            // <></>
+            <div className={style.none}>개설된 방이 없습니다.</div>
           )}
         </div>
       </div>
