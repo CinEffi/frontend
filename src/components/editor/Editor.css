@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@media print {
+  body {
+    margin: 0 !important;
+  }
+}
+
+.main-container {
+  font-family: 'Lato';
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ck-content {
+  font-family: 'Lato';
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+.editor-container_classic-editor .editor-container__editor {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* 툴바 바깥쪽 */
+.ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content {
+  border: 1px solid var(--border-color2);
+  border-bottom: 0;
+}
+
+/* 툴바 이너 전체  */
+.ck.ck-editor .ck-editor__top .ck-sticky-panel .ck-toolbar {
+  background-color: var(--my-comment-color);
+}
+
+/* 리스트 버튼 컬러  */
+.ck.ck-button:not(.ck-button_with-text),
+a.ck.ck-button:not(.ck-button_with-text) {
+  background-color: var(--my-comment-color);
+}
+.ck.ck-button:not(.ck-button_with-text):hover,
+a.ck.ck-button:not(.ck-button_with-text):hover {
+  color: var(--border-color2);
+}
+
+/* 모든 버튼 색 */
+.ck.ck-button,
+a.ck.ck-button {
+  color: var(--text-color);
+}
+.ck.ck-image-insert-form > .ck.ck-button {
+  color: var(--border-color);
+}
+
+/* 글씨체 버튼 */
+.ck.ck-dropdown .ck-button.ck-dropdown__button {
+  color: var(--text-color);
+}
+/* 글씨체 버튼호버 */
+.ck.ck-dropdown .ck-button.ck-dropdown__button:hover {
+  color: var(--border-color2);
+}
+/* 에디터 글쓰는 부분 */
+.ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+  min-height: 500px;
+  background-color: var(--sub-color);
+  border: 1px solid var(--border-color2);
+  color: var(--text-color);
+}
+
+/* 글씨체 드롭다운 */
+.ck-rounded-corners .ck.ck-dropdown > .ck-dropdown__panel > .ck-list,
+.ck.ck-dropdown > .ck-dropdown__panel > .ck-list.ck-rounded-corners {
+  background-color: var(--sub-color);
+  border: 1px solid var(--border-color2);
+  color: var(--text-color);
+}
+/* 글씨체 선택시 선택된 글씨색 */
+.ck.ck-dropdown .ck-button.ck-dropdown__button.ck-on {
+  color: var(--border-color2);
+}
+/* 드롭다운 버튼 클릭 호버 색상 */
+.ck.ck-splitbutton.ck-splitbutton_open
+  > .ck-button:not(.ck-on):not(.ck-disabled):not(:hover),
+.ck.ck-splitbutton:hover
+  > .ck-button:not(.ck-on):not(.ck-disabled):not(:hover) {
+  color: var(--border-color2);
+}
+/* 글씨체 드롭다운 리스트 */
+.ck.ck-button.ck-list-item-button:has(.ck-list-item-button__check-holder) {
+  background-color: var(--sub-color);
+  color: var(--text-color);
+}
+
+.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable,
+.ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners {
+  border: 1px solid var(--border-color2);
+}
+.ck-rounded-corners .ck.ck-editor__main > .ck-editor__editable:focus,
+.ck.ck-editor__main > .ck-editor__editable.ck-rounded-corners :focus {
+  border: 1px solid var(--border-color2);
+}
+
+@media (max-width: 815px) {
+  .ck.ck-editor__top
+    .ck-sticky-panel
+    .ck-sticky-panel__content.ck-sticky-panel__content_sticky {
+    top: 100px !important;
+  }
+}
+@media (min-width: 816px) {
+  .ck.ck-editor__top
+    .ck-sticky-panel
+    .ck-sticky-panel__content.ck-sticky-panel__content_sticky {
+    top: 63px !important;
+  }
+}

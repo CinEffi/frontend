@@ -1,0 +1,29 @@
+.boardContainer {
+  padding: 1rem 4.5rem 1.5rem 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding-top: 10px;
+  align-items: center;
+}
+.hotPostContainer {
+  width: 100%;
+  padding-bottom: 20px;
+}
+.title {
+  color: var(--text-color);
+}
+.createBtn {
+  height: 30px;
+}
+
+.pagenation {
+  padding: 10px;
+  color: var(--text-color);
+}
