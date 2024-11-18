@@ -127,12 +127,13 @@ button {
   align-items: center;
   justify-content: space-between;
   margin: 5px;
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
   background-color: #073263;
   border-radius: 5px;
   color: white;
   font-size: 13px;
   -webkit-font-smoothing: antialiased;
+  gap: 5px;
 }
 
 .tagDeleteBtn {
@@ -141,11 +142,14 @@ button {
   align-items: center;
   width: 15px;
   height: 15px;
-  margin-left: 5px;
   background-color: unset;
   border-color: rgb(0 0 0 / 0%);
   color: rgb(141 190 252);
   cursor: pointer;
+}
+.xImg {
+  width: 10px;
+  height: 10px;
 }
 
 .tagInput {

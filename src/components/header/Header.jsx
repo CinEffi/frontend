@@ -41,9 +41,9 @@ const Header = () => {
           <Link to="/chat" className={style.menuLink}>
             채팅방
           </Link>
-          {/* <Link to='/' className={style.menuLink}>
-          게시판
-        </Link> */}
+          <Link to="/boardlist" className={style.menuLink}>
+            게시판
+          </Link>
         </div>
         <div className={style.rightMenu}>
           <form onSubmit={handleSearch}>

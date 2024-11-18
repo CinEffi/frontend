@@ -4,7 +4,7 @@ import { LinearProgress, Tab, Tabs, Box, Typography } from '@mui/material';
 import style from '../UserInfoPage.module.css';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import FollowButton from '../../../components/button/FollowButton';
+import FollowButton from '../../../components/button/FollowButton/FollowButton';
 import UserInfoModal from '../UserInfoModal';
 import { useUser } from '../../../utils/UserContext';
 import { useParams } from 'react-router-dom';
@@ -22,7 +22,7 @@ const LeftContainer = ({ tab, setTab, data }) => {
 
   const expPercentage = (result.exp / result.expMax) * 100;
 
-  const handleClick = (event) => {
+  const handleClick = event => {
     setAnchorEl(event.currentTarget);
   };
 
@@ -42,7 +42,7 @@ const LeftContainer = ({ tab, setTab, data }) => {
     setUserInfoModalOpen(false);
   };
 
-  const tabStyle = (isSelected) => ({
+  const tabStyle = isSelected => ({
     display: 'flex',
     justifyContent: 'space-between',
     width: '90%',

@@ -1,6 +1,6 @@
 import React from 'react';
 import style from '../../UserInfoPage.module.css';
-import FollowButton from '../../../../components/button/FollowButton';
+import FollowButton from '../../../../components/button/FollowButton/FollowButton';
 import { useNavigate } from 'react-router-dom';
 
 const FollowCard = ({

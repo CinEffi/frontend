@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import style from './FollowButton.module.css';
 import { useMutation } from 'react-query';
-import { followUser, unfollowUser } from '../../utils/user';
-import { useUser } from '../../utils/UserContext';
-import useConfirmLogin from '../../utils/useConfirmLogin';
+import { followUser, unfollowUser } from '../../../utils/user';
+import { useUser } from '../../../utils/UserContext';
+import useConfirmLogin from '../../../utils/useConfirmLogin';
 
 const FollowButton = ({
   userId,
